@@ -1,0 +1,24 @@
+{
+  "name": "swedish-org-no",
+  "version": "1.0.0",
+  "main": "dist/swedish-org-no.cjs.js",
+  "module": "dist/swedish-org-no.esm.js",
+  "browser": "dist/swedish-org-no.umd.js",
+  "dependencies": {
+    "ms": "^2.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.58.0",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
