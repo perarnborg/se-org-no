@@ -5,17 +5,19 @@
   "module": "dist/swedish-org-no.esm.js",
   "browser": "dist/swedish-org-no.umd.js",
   "dependencies": {
+    "mocha": "^5.1.1",
     "ms": "^2.0.0"
   },
   "devDependencies": {
     "rollup": "^0.58.0",
     "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "swedish-ssn": "^1.0.3"
   },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "node test/test.js",
+    "test": "mocha",
     "pretest": "npm run build"
   },
   "files": [
