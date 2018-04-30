@@ -1,4 +1,4 @@
-# swedish-org-no
+# se-org-no
 
 Description
 

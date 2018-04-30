@@ -28,7 +28,7 @@ export const isValidOrgNo = (input, inputOptions) => {
 
   input = input.replace(/\D/g, '')
 
-  const isOrgNo = orgNo.isValidOrgNo(input, options)
+  const isOrgNo = orgNo.isValidOrgNo(input)
 
   if (!isOrgNo && options.allowSsn) {
     return ssn.isValidSsn(input, options)

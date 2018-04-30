@@ -1,9 +1,16 @@
 {
-  "name": "swedish-org-no",
+  "name": "se-org-no",
+  "description": "Validation for Swedish style organization numbers (organisationsnummer)",
   "version": "1.0.0",
-  "main": "dist/swedish-org-no.cjs.js",
-  "module": "dist/swedish-org-no.esm.js",
-  "browser": "dist/swedish-org-no.umd.js",
+  "homepage": "https://github.com/perarnborg/se-org-no#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perarnborg/se-org-no.git"
+  },
+  "main": "dist/se-org-no.cjs.js",
+  "module": "dist/se-org-no.esm.js",
+  "browser": "dist/se-org-no.umd.js",
   "dependencies": {
     "mocha": "^5.1.1",
     "ms": "^2.0.0"

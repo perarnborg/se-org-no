@@ -1,5 +1,9 @@
-export const isValidOrgNo = (input, options) => {
-  const isValidFirstDigit = ['2', '5', '7', '8', '9'].indexOf(input.substr(0, 1)) > -1
+import { hasValidControlDigit } from './control-digit'
 
-  return isValidFirstDigit
+export const isValidOrgNo = (input) => {
+  const isInValidFirstDigit = ['1'].indexOf(input.substr(0, 1)) > -1 // First digit should not be 1
+
+  const isInValidThirdDigit = parseInt(input.substr(2, 1), 10) <= 1 // Third digit should not be 0 or 1
+
+  return !isInValidFirstDigit && !isInValidThirdDigit && hasValidControlDigit(input)
 }
