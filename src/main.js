@@ -22,13 +22,15 @@ export const isValidOrgNo = (input, inputOptions) => {
 
   const hasPattern = hasValidPattern(input)
 
-  if (!hasValidPattern) {
+  if (!hasPattern) {
     return false
   }
 
   input = input.replace(/\D/g, '')
 
   const isOrgNo = orgNo.isValidOrgNo(input)
+
+  console.log(input, isOrgNo)
 
   if (!isOrgNo && options.allowSsn) {
     return ssn.isValidSsn(input, options)

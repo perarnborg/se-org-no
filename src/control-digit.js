@@ -1,18 +1,16 @@
 function getControlDigit(input) {
-  const digits = input.substr(9).split()
+  const digits = input.substr(0, 9).split('')
 
-  let factor
+  let factor = 1
   const factoredDigits = digits.map((d) => {
     factor = factor === 1 ? 2 : 1
-    return parseInt(d) * factor + ''
+    return (parseInt(d, 10) * factor + '').split('')
   })
 
-  const sum = factoredDigits.reduce((s, d) => {
-    const partSum = d.split().reduce((ps, pd) => {
-      return ps + parseInt(pd, 0)
-    })
+  const flattenedFactoredDigits = [].concat.apply([], factoredDigits)
 
-    return s + partSum
+  const sum = flattenedFactoredDigits.reduce((s, d) => {
+    return parseInt(s, 10) + parseInt(d, 10)
   })
 
   const controlDigit = 10 - sum % 10

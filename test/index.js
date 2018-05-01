@@ -42,6 +42,8 @@ describe('seOrgNo.isValidOrgNo', function() {
     assert.equal(seOrgNo.isValidOrgNo(''), false);
     assert.equal(seOrgNo.isValidOrgNo(0), false);
     assert.equal(seOrgNo.isValidOrgNo({}), false);
+    assert.equal(seOrgNo.isValidOrgNo('a'), false);
+    assert.equal(seOrgNo.isValidOrgNo('a111111111'), false);
   });
 
   it('should pass with valid ssn by default', function() {
@@ -55,5 +57,11 @@ describe('seOrgNo.isValidOrgNo', function() {
 
   it('should not pass with valid ssn if options do not allow it', function() {
     assert.equal(seOrgNo.isValidOrgNo(validSsn, {allowSsn: false}), false);
+  });
+
+  it('should pass with valid org nos even if options do not allow ssn', function() {
+    assert.equal(seOrgNo.isValidOrgNo(validOrgNo1, {allowSsn: false}), true);
+    assert.equal(seOrgNo.isValidOrgNo(validOrgNo2, {allowSsn: false}), true);
+    assert.equal(seOrgNo.isValidOrgNo(validOrgNo3, {allowSsn: false}), true);
   });
 });
