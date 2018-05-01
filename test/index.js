@@ -7,10 +7,10 @@ const validOrgNo3 = '2520100013'
 
 const inValidOrgNo = '5569565367'
 
-const validSsn = '8109230279'
+const validSsn = '8101013608'
 
-const ssnWithInvalidLastFour = '8109230200'
-const ssnWithInvalidDate = '8109310279'
+const ssnWithInvalidLastFour = '8109230600'
+const ssnWithInvalidDate = '8109310989'
 
 function orgNoWithDash(input) {
   return input.substr(0, 6) + '-' + input.substr(6)

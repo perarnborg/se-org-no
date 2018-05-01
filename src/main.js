@@ -30,8 +30,6 @@ export const isValidOrgNo = (input, inputOptions) => {
 
   const isOrgNo = orgNo.isValidOrgNo(input)
 
-  console.log(input, isOrgNo)
-
   if (!isOrgNo && options.allowSsn) {
     return ssn.isValidSsn(input, options)
   }
