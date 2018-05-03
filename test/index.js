@@ -34,7 +34,7 @@ describe('seOrgNo.isValidOrgNo', function() {
   });
 
   it('should not pass with valid org no with dash in wrong place', function() {
-    assert.equal(seOrgNo.isValidOrgNo(inValidOrgNo), false);
+    assert.equal(seOrgNo.isValidOrgNo(validOrgNo1 + '-'), false);
   });
 
   it('should not pass with empty input or incorrect types', function() {
