@@ -13,7 +13,7 @@ function hasValidPattern(input) {
 }
 
 export const isValidOrgNo = (input, inputOptions) => {
-  const options = {
+  const options = Object.assign(
     ...defaultOptions,
     ...inputOptions
   }
