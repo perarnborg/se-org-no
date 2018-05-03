@@ -23,7 +23,7 @@ isValidOrgNo('5569565368')
 isValidOrgNo('foo')
 //=> false
 
-// By default personnummer (SSN) are accepted if they are for a user that is older than 18 years
+// By default personnummer (SSN) are accepted if they are for a user that is 16 years or older
 // This is for organizations of type enskild firma
 isValidOrgNo('8101013608')
 //=> true
@@ -37,6 +37,23 @@ isValidOrgNo('8101013608', {allowSsn: false})
 // Optionally validate that a ssn is for a person of at least a certain age
 isValidOrgNo('8101013608', {ssnMinYears: 80})
 //=> false
+```
+
+If you are in a multinational context you can use the alias isValidSwedishOrgNo for clarity:
+
+```js
+import {isValidSwedishOrgNo} from 'se-org-no'
+
+isValidSwedishOrgNo('8101013608')
+//=> true
+```
+
+Alternatively with CommonJS:
+```js
+var seOrgNo = require("se-org-no")
+
+seOrgNo.isValidOrgNo('8101013608')
+//=> true
 ```
 
 ## Legacy support

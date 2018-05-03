@@ -1,4 +1,4 @@
-import { hasValidControlDigit } from './control-digit'
+import { hasValidControlDigit } from 'se-ssn';
 
 export const isValidOrgNo = (input) => {
   const isInValidFirstDigit = ['1'].indexOf(input.substr(0, 1)) > -1 // First digit should not be 1

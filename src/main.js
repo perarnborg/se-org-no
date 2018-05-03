@@ -1,19 +1,13 @@
-import * as ssn from './ssn.js';
-import * as orgNo from './org-no.js';
+import { hasValidPattern, isValidSsn } from 'se-ssn';
+import * as orgNo from './org-no';
 
 const defaultOptions = {
   allowSsn: true,
-  ssnMinYears: 18
-}
-
-const pattern = /^\d{6}[-|(\s)]{0,1}\d{4}$/
-
-function hasValidPattern(input) {
-  return pattern.test(input)
+  ssnMinYears: 16
 }
 
 export const isValidOrgNo = (input, inputOptions) => {
-  const options = Object.assign(
+  const options = {
     ...defaultOptions,
     ...inputOptions
   }
@@ -31,8 +25,10 @@ export const isValidOrgNo = (input, inputOptions) => {
   const isOrgNo = orgNo.isValidOrgNo(input)
 
   if (!isOrgNo && options.allowSsn) {
-    return ssn.isValidSsn(input, options)
+    return isValidSsn(input, options)
   }
 
   return isOrgNo
 }
+
+export const isValidSwedishOrgNo = isValidOrgNo

@@ -9,7 +9,7 @@ const inValidOrgNo = '5569565367'
 
 const validSsn = '8101013608'
 
-const ssnWithInvalidLastFour = '8109230600'
+const ssnWithInvalidControlDigit = '8101013600'
 const ssnWithInvalidDate = '8109310989'
 
 function orgNoWithDash(input) {
@@ -51,7 +51,7 @@ describe('seOrgNo.isValidOrgNo', function() {
   });
 
   it('should not pass with invalid ssn', function() {
-    assert.equal(seOrgNo.isValidOrgNo(ssnWithInvalidLastFour), false);
+    assert.equal(seOrgNo.isValidOrgNo(ssnWithInvalidControlDigit), false);
     assert.equal(seOrgNo.isValidOrgNo(ssnWithInvalidDate), false);
   });
 
