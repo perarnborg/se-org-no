@@ -11,8 +11,7 @@
   "main": "dist/se-org-no.cjs.js",
   "module": "dist/se-org-no.esm.js",
   "browser": "dist/se-org-no.umd.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
@@ -22,8 +21,7 @@
     "rollup": "^0.58.0",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "swedish-ssn": "^1.0.3"
+    "rollup-plugin-node-resolve": "^3.0.0"
   },
   "scripts": {
     "build": "rollup -c",

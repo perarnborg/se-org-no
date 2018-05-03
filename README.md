@@ -39,6 +39,10 @@ isValidOrgNo('8101013608', {ssnMinYears: 80})
 //=> false
 ```
 
+## Legacy support
+
+IE8 is not supported.
+
 ## License
 
 [MIT](LICENSE).
