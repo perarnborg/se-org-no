@@ -24,6 +24,9 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "se-ssn": "^1.1.3"
   },
+  "peerDependencies": {
+    "se-ssn": "=>1.1.3"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",

@@ -5,10 +5,10 @@ Validation for Swedish style organization numbers (organisationsnummer).
 ## Getting started
 
 The library is available as an [npm package](https://www.npmjs.com/package/se-org-no).
-To install the package run:
+To install the package including peer dependency [se-ssn](https://www.npmjs.com/package/se-ssn) run:
 
 ```bash
-npm install se-org-no --save
+npm install se-ssn se-org-no --save
 ```
 
 Use like this:
