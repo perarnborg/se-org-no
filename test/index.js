@@ -5,7 +5,8 @@ const validOrgNo1 = '5569565368'
 const validOrgNo2 = '5568101520'
 const validOrgNo3 = '2520100013'
 
-const inValidOrgNo = '5569565367'
+const orgNoWithInvalidControlDigit = '5569565367'
+const orgNoWithInvalidThirdDigit = '5569565318'
 
 const validSsn = '8101013608'
 
@@ -29,8 +30,12 @@ describe('seOrgNo.isValidOrgNo', function() {
     assert.equal(seOrgNo.isValidOrgNo(orgNoWithDash(validOrgNo3)), true);
   });
 
-  it('should not pass with invalid org no', function() {
-    assert.equal(seOrgNo.isValidOrgNo(inValidOrgNo), false);
+  it('should not pass with invalid control didgit', function() {
+    assert.equal(seOrgNo.isValidOrgNo(orgNoWithInvalidControlDigit), false);
+  });
+
+  it('should not pass with invalid third didgit', function() {
+    assert.equal(seOrgNo.isValidOrgNo(orgNoWithInvalidThirdDigit), false);
   });
 
   it('should not pass with valid org no with dash in wrong place', function() {
