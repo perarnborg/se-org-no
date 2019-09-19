@@ -7,10 +7,11 @@ const defaultOptions = {
 }
 
 export const isValidOrgNo = (input, inputOptions) => {
-  const options = {
-    ...defaultOptions,
-    ...inputOptions
-  }
+  const options = Object.assign(
+    {},
+    defaultOptions,
+    inputOptions
+  )
 
   input = input + ''
 
