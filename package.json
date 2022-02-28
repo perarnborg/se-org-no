@@ -25,7 +25,7 @@
     "se-ssn": "^2.1.0"
   },
   "peerDependencies": {
-    "se-ssn": "=>2.1.0"
+    "se-ssn": "^2.1.0"
   },
   "scripts": {
     "build": "rollup -c",
